@@ -171,6 +171,10 @@
 			 */
 
 			this.$input = $('<input type="text"' + (isMobile? 'tabindex="-1"': '') + ' placeholder="'+ this.getPlaceholder() +'" class="'+ this.settings.inputClass + '">').appendTo(this.$container)
+			//add readonly for input,change by lmx
+			if(!this.settings.focusInput){
+				this.$input.attr("readonly","readonly");
+			}
 
 			/* Update input text */
 
